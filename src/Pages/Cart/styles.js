@@ -68,4 +68,15 @@ export const ProductTable = styled.table`
   }
 `;
 
-export const Total = styled.div``;
+export const Total = styled.div`
+  display: flex;
+  span {
+    color: #999;
+    font-weight: bold;
+  }
+
+  strong {
+    font-size: 28px;
+    margin-left: 5px;
+  }
+`;

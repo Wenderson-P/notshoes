@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
+import api from '../../services/api';
 import { ProductList } from './styles';
 
 export default class Home extends Component {
   state = {
     products: [],
   };
+
+  async componentDidMount() {
+    const response = await api.get('products');
+    this.setState({ products: response.data });
+  }
 
   render() {
     return (

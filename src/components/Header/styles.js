@@ -7,3 +7,23 @@ export const Container = styled.div`
   align-items: center;
   margin: 50px 0;
 `;
+
+export const Cart = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  div {
+    text-align: right;
+    margin-right: 10px;
+
+    strong {
+      display: block;
+      color: #fff;
+    }
+    span {
+      font-size: 12px;
+      color: #999;
+    }
+  }
+`;

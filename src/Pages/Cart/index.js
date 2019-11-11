@@ -10,7 +10,7 @@ import { Container, ProductTable, Total } from './styles';
 import { formatPrice } from '../../util/format';
 import * as CartActions from '../../store/modules/cart/actions';
 
-function Cart({ cart, removeFromCart, updateAmount }) {
+function Cart({ cart, total, removeFromCart, updateAmount }) {
   function increment(product) {
     updateAmount(product.id, product.amount + 1);
   }
@@ -75,7 +75,7 @@ function Cart({ cart, removeFromCart, updateAmount }) {
         <button type="button">Finalizar pedido</button>
         <Total>
           <span>Total</span>
-          <strong>R$1200,35</strong>
+          <strong>{total}</strong>
         </Total>
       </footer>
     </Container>
@@ -87,6 +87,9 @@ const mapStateToProps = state => ({
     ...product,
     subTotal: formatPrice(product.price * product.amount),
   })),
+  total: state.cart.reduce((total, product) => {
+    return formatPrice(total + product.price * product.amount);
+  }, 0),
 });
 
 const mapDispatchToProps = dispatch =>

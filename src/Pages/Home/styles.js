@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+const discountColor = '#bc1537';
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,10 +14,20 @@ export const ProductList = styled.ul`
     background: #fff;
     border-radius: 4px;
     padding: 20px;
-
-    img {
-      align-self: center;
-      max-width: 250px;
+    div {
+      display: flex;
+      img {
+        align-self: center;
+        max-width: 250px;
+      }
+      h5 {
+        height: 20px;
+        width: 35px;
+        text-align: center;
+        font-size: 16px;
+        color: ${discountColor};
+        border: 1px solid ${discountColor};
+      }
     }
 
     > strong {

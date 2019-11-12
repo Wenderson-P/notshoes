@@ -80,3 +80,24 @@ export const Total = styled.div`
     margin-left: 5px;
   }
 `;
+
+export const EmptyScreen = styled.div`
+  height: 100%;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+  }
+  button {
+    margin-top: 20px;
+    background: none;
+    color: #5a2d82;
+    border: 1px solid #5a2d82;
+  }
+`;

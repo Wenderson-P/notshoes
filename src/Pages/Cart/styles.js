@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+const purpleColor = '#5a2d82';
+
 export const Container = styled.div`
   padding: 30px;
   background: #fff;
@@ -13,7 +15,7 @@ export const Container = styled.div`
   }
 
   button {
-    background: #7159c1;
+    background: ${purpleColor};
     color: #fff;
     border: 0;
     border-radius: 4px;
@@ -97,7 +99,7 @@ export const EmptyScreen = styled.div`
   button {
     margin-top: 20px;
     background: none;
-    color: #5a2d82;
-    border: 1px solid #5a2d82;
+    color: ${purpleColor};
+    border: 1px solid ${purpleColor};
   }
 `;

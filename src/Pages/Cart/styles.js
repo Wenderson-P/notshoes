@@ -101,5 +101,12 @@ export const EmptyScreen = styled.div`
     background: none;
     color: ${purpleColor};
     border: 1px solid ${purpleColor};
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+
+    &:hover {
+      background: ${purpleColor};
+      color: white;
+    }
   }
 `;

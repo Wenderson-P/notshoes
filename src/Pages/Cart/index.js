@@ -68,7 +68,7 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
                       type="button"
                       onClick={() => removeFromCart(product.id)}
                     >
-                      <MdDelete size={14} color="7159c1" />
+                      <MdDelete size={20} color="7159c1" />
                     </button>
                   </td>
                 </tr>

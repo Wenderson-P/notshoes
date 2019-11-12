@@ -3,13 +3,14 @@ import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
   MdDelete,
+  MdRemoveShoppingCart,
 } from 'react-icons/md';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Container, ProductTable, Total, EmptyScreen } from './styles';
 import { formatPrice } from '../../util/format';
 import * as CartActions from '../../store/modules/cart/actions';
+import history from '../../services/history';
 
 function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
   function increment(product) {
@@ -84,12 +85,14 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
         </>
       ) : (
         <EmptyScreen>
-          <AiOutlineShoppingCart size={50} color="#5a2d82" />
+          <MdRemoveShoppingCart size={50} color="#5a2d82" />
           <span>Seu carrinho está vazio :(</span>
           <span>
             Que tal navegar pela nossa loja e conhecer nossos produtos ?
           </span>
-          <button>Voltar para a página inicial</button>
+          <button type="button" onClick={() => history.push('/')}>
+            Voltar para a página inicial
+          </button>
         </EmptyScreen>
       )}
     </Container>
